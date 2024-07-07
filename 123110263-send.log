@@ -17,3 +17,33 @@
   <level>FINE</level>
   <message>File 123110263-GABRIEL GERMANO DOS SANTOS.zip was received. It was sent by GABRIEL GERMANO DOS SANTOS from IP 150.165.74.88 at 05-07-2024 13*43*39</message>
 </record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-07-05T20:44:57.686+0000</date>
+  <logger>GABRIEL GERMANO DOS SANTOS</logger>
+  <level>FINE</level>
+  <message>File 123110263-GABRIEL GERMANO DOS SANTOS.zip was received. It was sent by GABRIEL GERMANO DOS SANTOS from IP 192.168.101.6 at 05-07-2024 20*44*57</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-07-07T20:34:53.852+0000</date>
+  <logger>GABRIEL GERMANO DOS SANTOS</logger>
+  <level>FINE</level>
+  <message>File 123110263-GABRIEL GERMANO DOS SANTOS.zip was received. It was sent by GABRIEL GERMANO DOS SANTOS from IP 192.168.101.6 at 07-07-2024 20*34*53</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-07-07T21:06:08.538+0000</date>
+  <logger>GABRIEL GERMANO DOS SANTOS</logger>
+  <level>FINE</level>
+  <message>File 123110263-GABRIEL GERMANO DOS SANTOS.zip was received. It was sent by GABRIEL GERMANO DOS SANTOS from IP 192.168.101.6 at 07-07-2024 21*06*08</message>
+</record>

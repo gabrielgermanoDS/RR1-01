@@ -1,6 +1,9 @@
 package produto;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 
 /**
  * Classe que representa um repositório de produtos usando ArrayList como
@@ -40,8 +43,19 @@ public class RepositorioProdutoArrayList {
 	 * @return
 	 */
 	private int procurarIndice(int codigo) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+
+		if (index == -1) return index;
+
+		for (int i = 0; i < this.produtos.size(); i++) {
+
+			Produto p = (Produto) this.produtos.get(i);
+
+			if (p.getCodigo() == codigo) {
+				return i;
+			}
+		}
+
+		return -1;
 	}
 
 	/**
@@ -51,16 +65,28 @@ public class RepositorioProdutoArrayList {
 	 * @return
 	 */
 	public boolean existe(int codigo) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+
+		if (index == -1) return false;
+
+		for (int i = 0; i < this.produtos.size(); i++) {
+			
+			Produto p = (Produto) this.produtos.get(i);
+
+			if (p.getCodigo() == codigo) return true;
+
+		}
+
+		return false;
 	}
 
 	/**
 	 * Insere um novo produto (sem se preocupar com duplicatas)
 	 */
 	public void inserir(Produto produto) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+
+		this.index++;
+		this.produtos.add(produto);
+
 	}
 
 	/**
@@ -69,8 +95,25 @@ public class RepositorioProdutoArrayList {
 	 * utilizado.
 	 */
 	public void atualizar(Produto produto) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+
+		if (index == -1) throw new NoSuchElementException();
+
+		boolean found = false;
+
+		for (int i = 0; i < this.produtos.size(); i++) {
+
+			Produto p = (Produto) this.produtos.get(i);
+
+			if (p.getCodigo() == produto.getCodigo()) {
+				this.produtos.set(i, produto);
+				found = true;
+			}
+		}
+
+		if (!found) {
+			throw new NoSuchElementException();
+		}
+
 	}
 
 	/**
@@ -81,8 +124,24 @@ public class RepositorioProdutoArrayList {
 	 * @param codigo
 	 */
 	public void remover(int codigo) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+
+		if (index == -1) throw new NoSuchElementException();
+
+		boolean found = false;
+
+		Iterator it = this.produtos.iterator();
+
+		while (it.hasNext()) {
+
+			Produto p = (Produto) it.next();
+
+			if (p.getCodigo() == codigo) {
+				it.remove();
+				found = true;
+			}
+		}
+
+		if (!found) throw new NoSuchElementException();
 	}
 
 	/**
@@ -93,7 +152,18 @@ public class RepositorioProdutoArrayList {
 	 * @return
 	 */
 	public Produto procurar(int codigo) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+
+		if (index == -1) return null;
+
+		for (int i = 0; i < this.produtos.size(); i++) {
+			
+			Produto p = (Produto) this.produtos.get(i);
+
+			if (p.getCodigo() == codigo) {
+				return p;
+			}
+		}
+
+		return null;
 	}
 }
